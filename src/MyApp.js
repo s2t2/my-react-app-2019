@@ -1,17 +1,33 @@
 import './App.css';
 
 import React from 'react';
+import { Router } from "@reach/router"
+
+import Clock from './Clock';
+import Dashboard from './Dashboard';
+import Home from './Home';
+
+class MyApp extends React.Component {
+  componentDidMount() {
+    console.log("APP DID MOUNT")
+  }
+
+  componentWillUnmount() {
+    console.log("APP WILL UNMOUNT")
+  }
+
+  render() {
+    return (
+      <Router>
+        <Home path="/" />
+        <Dashboard path="dash" />
+        <Clock path="clock" />
+      </Router>
+    );
+  };
+};
+
 //import { render } from "react-dom"
-import { Router, Link } from "@reach/router"
-
-
-let Home = function(){
-  return (<h1>Home</h1>)
-}
-
-let Dashboard = function(){
-  return (<h1>Dashboard</h1>)
-}
 
 //function MyApp() {
 //  render(
@@ -28,24 +44,6 @@ let Dashboard = function(){
 //  }
 //}
 
-class MyApp extends React.Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <h1>Hello World</h1>
-          <Link to="/dashboard">Dashboard</Link>
-        </header>
 
-          <Router>
-            <Home path="/" />
-            <Dashboard path="dashboard" />
-          </Router>
-
-
-      </div>
-    );
-  };
-};
 
 export default MyApp;

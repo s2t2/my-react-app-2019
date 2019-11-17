@@ -3,6 +3,7 @@
 ## React
 
    + https://reactjs.org/
+   + https://reactjs.org/docs/state-and-lifecycle.html
 
 ## Create React App
 
