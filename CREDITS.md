@@ -5,6 +5,21 @@
    + https://reactjs.org/
    + https://reactjs.org/docs/state-and-lifecycle.html
    + https://stackoverflow.com/a/39426846/670433
+   + https://reactjs.org/docs/faq-functions.html
+   + https://www.freecodecamp.org/news/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56/
+
+Passing params onclick:
+
+```js
+<button onClick={this.handleClick.bind(this, id)} />
+```
+
+```js
+handleChange = () => {
+  // call this function from render
+  // and this.whatever in here works fine.
+};
+```
 
 ## Create React App
 
