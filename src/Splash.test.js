@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MyApp from './MyApp';
+import Splash from './Splash';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<MyApp />, div);
+  ReactDOM.render(<Splash />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
