@@ -1,7 +1,7 @@
 import './App.css';
 
 import React from 'react';
-import { Router } from "@reach/router"
+import { Router, Link } from "@reach/router"
 
 import Clock from './Clock';
 import Dashboard from './Dashboard';
@@ -18,11 +18,29 @@ class MyApp extends React.Component {
 
   render() {
     return (
-      <Router>
-        <Home path="/" />
-        <Dashboard path="dash" />
-        <Clock path="clock" />
-      </Router>
+      <div>
+        <nav>
+          <Link to="/">Home</Link>&nbsp;|&nbsp;
+          <Link to="dash">Dashboard</Link>&nbsp;|&nbsp;
+          <Link to="clock">Clock</Link>
+        </nav>
+        <hr/>
+
+        <Router>
+          <Home path="/" />
+          <Dashboard path="dash" />
+          <Clock path="clock" />
+        </Router>
+
+        <hr/>
+        <footer>
+          <p>
+            Copyright &copy; 2019 Data Creative, LLC&nbsp;|&nbsp;
+            <a href="https://github.com">Source Code</a>
+
+          </p>
+        </footer>
+      </div>
     );
   };
 };

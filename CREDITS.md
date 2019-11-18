@@ -4,6 +4,7 @@
 
    + https://reactjs.org/
    + https://reactjs.org/docs/state-and-lifecycle.html
+   + https://stackoverflow.com/a/39426846/670433
 
 ## Create React App
 
