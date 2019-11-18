@@ -5,13 +5,19 @@ class Clock extends React.Component {
   constructor(props) {
     super(props);
     this.state = {date: new Date()};
+    this.tick = this.tick.bind(this)
+  }
+
+  tick(){
+    this.setState({date: new Date()})
   }
 
   componentDidMount() {
     console.log("CLOCK DID MOUNT")
     console.log("CLOCK PROPS", this.props)
     console.log("CLOCK STATE", this.state)
-    this.interval = setInterval(() => this.setState({date: new Date()}), 1000);
+    //this.interval = setInterval(() => this.setState({date: new Date()}), 1000);
+    this.interval = setInterval(this.tick, 1000);
   }
 
   componentWillUnmount() {
