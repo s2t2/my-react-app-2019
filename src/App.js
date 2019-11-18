@@ -7,7 +7,7 @@ import Dashboard from './Dashboard';
 import Home from './Home';
 import Splash from './Splash';
 
-class MyApp extends React.Component {
+class App extends React.Component {
   componentDidMount() { console.log("APP DID MOUNT") }
 
   render() {
@@ -42,7 +42,7 @@ class MyApp extends React.Component {
 
 //import { render } from "react-dom"
 
-//function MyApp() {
+//function App() {
 //  render(
 //    <Router>
 //      <Home path="/" />
@@ -51,12 +51,10 @@ class MyApp extends React.Component {
 //  )
 //}
 
-//class MyApp extends React.Component {
+//class App extends React.Component {
 //  render() {
 //    return <h1>Hello, {this.props.name}</h1>;
 //  }
 //}
 
-
-
-export default MyApp;
+export default App;
